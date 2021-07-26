@@ -154,7 +154,15 @@ var numeroString = "3"
 var sumaIntStr = numeroEntero + Int(numeroString)!
 
 var nombreAA: String? = "David"
-var nombreBB: String? = 
+
+
+// MARK: - Funciones
+
+func saludar(mensaje: String){
+    print(mensaje)
+}
+
+saludar(mensaje: "holaaa")
 
 
 
