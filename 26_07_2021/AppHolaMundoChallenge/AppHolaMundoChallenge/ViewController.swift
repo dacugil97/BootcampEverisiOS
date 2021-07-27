@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var holaLbl: UILabel!
     @IBOutlet weak var sunLbl: UILabel!
     @IBOutlet weak var holaHeight: NSLayoutConstraint!
-    @IBOutlet weak var holaWidth: NSLayoutConstraint!
     @IBOutlet weak var sunHeight: NSLayoutConstraint!
     
     // MARK: - IBActions
@@ -24,6 +23,9 @@ class ViewController: UIViewController {
         
         self.holaHeight.constant = 100
         self.sunHeight.constant = 100
+        
+        self.holaLbl.backgroundColor = UIColor.red
+        self.sunLbl.backgroundColor = UIColor.green
     }
     
     
