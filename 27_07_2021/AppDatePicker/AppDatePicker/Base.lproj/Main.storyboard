@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lbn-Yq-zXU">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AppDatePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MM/DD/YY HH:mm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrZ-uF-dUW">
+                                <rect key="frame" x="20" y="71" width="384" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM/DD/YY HH:mm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aQs-9p-a7M">
+                                <rect key="frame" x="20" y="155" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="showPickerTFActionWithMyTextField:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="8Fa-40-lkC"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jnF-kf-HG9"/>
+                    <connections>
+                        <outlet property="dateLbl" destination="mrZ-uF-dUW" id="ZEb-ms-84H"/>
+                        <outlet property="dateTF" destination="aQs-9p-a7M" id="JSL-cI-1MG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="83.705357142857139"/>
+        </scene>
+        <!--Segunda View Controller-->
+        <scene sceneID="4fe-fV-RWZ">
+            <objects>
+                <viewController id="f2h-PF-aRW" customClass="SegundaViewController" customModule="AppDatePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LLC-GP-3ru">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_Titulo del queso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2m6-5Y-sYG">
+                                <rect key="frame" x="20" y="108" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="aKE-ao-ZNb">
+                                <rect key="frame" x="20" y="158.5" width="374" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="kID-IT-aqJ"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSJ-Y4-Pkh">
+                                <rect key="frame" x="20" y="537" width="374" height="216"/>
+                            </pickerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ipe-0M-KE5">
+                                <rect key="frame" x="20" y="379" width="374" height="197"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="197" id="Qzx-hk-zhE"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="egm-rV-NVA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bSJ-Y4-Pkh" firstAttribute="leading" secondItem="egm-rV-NVA" secondAttribute="leading" constant="20" id="15E-He-9Vx"/>
+                            <constraint firstItem="egm-rV-NVA" firstAttribute="trailing" secondItem="Ipe-0M-KE5" secondAttribute="trailing" constant="20" id="B6b-6s-OFQ"/>
+                            <constraint firstItem="Ipe-0M-KE5" firstAttribute="top" secondItem="aKE-ao-ZNb" secondAttribute="bottom" constant="20.5" id="UiK-DD-kJm"/>
+                            <constraint firstItem="2m6-5Y-sYG" firstAttribute="leading" secondItem="egm-rV-NVA" secondAttribute="leading" constant="20" id="V8H-uh-pYZ"/>
+                            <constraint firstItem="aKE-ao-ZNb" firstAttribute="top" secondItem="2m6-5Y-sYG" secondAttribute="bottom" constant="30" id="ZNt-8d-zMM"/>
+                            <constraint firstItem="egm-rV-NVA" firstAttribute="bottom" secondItem="bSJ-Y4-Pkh" secondAttribute="bottom" constant="60" id="Zxk-df-d7z"/>
+                            <constraint firstItem="Ipe-0M-KE5" firstAttribute="leading" secondItem="egm-rV-NVA" secondAttribute="leading" constant="20" id="dMx-tx-rbS"/>
+                            <constraint firstItem="egm-rV-NVA" firstAttribute="trailing" secondItem="2m6-5Y-sYG" secondAttribute="trailing" constant="20" id="l1f-dQ-rBV"/>
+                            <constraint firstItem="2m6-5Y-sYG" firstAttribute="top" secondItem="egm-rV-NVA" secondAttribute="top" constant="20" id="ppX-Pj-Cyt"/>
+                            <constraint firstItem="aKE-ao-ZNb" firstAttribute="leading" secondItem="egm-rV-NVA" secondAttribute="leading" constant="20" id="rRr-Z1-V48"/>
+                            <constraint firstItem="egm-rV-NVA" firstAttribute="trailing" secondItem="aKE-ao-ZNb" secondAttribute="trailing" constant="20" id="tHv-Er-huL"/>
+                            <constraint firstItem="egm-rV-NVA" firstAttribute="trailing" secondItem="bSJ-Y4-Pkh" secondAttribute="trailing" constant="20" id="wN3-S6-Je6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="I1c-FZ-bNs"/>
+                    <connections>
+                        <outlet property="quesoImgV" destination="Ipe-0M-KE5" id="5GE-ac-cOk"/>
+                        <outlet property="quesoLbl" destination="2m6-5Y-sYG" id="roA-Ae-jIg"/>
+                        <outlet property="quesoSelV" destination="bSJ-Y4-Pkh" id="JIH-kZ-DzB"/>
+                        <outlet property="quesoTV" destination="aKE-ao-ZNb" id="JRz-To-m39"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xCv-Dk-2Wj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="758.70535714285711"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="HOC-c8-L7A">
+            <objects>
+                <tabBarController id="Lbn-Yq-zXU" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rPI-WQ-w8L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="N4I-3W-1If" kind="relationship" relationship="viewControllers" id="AWC-fD-TJa"/>
+                        <segue destination="jUK-qZ-3Ve" kind="relationship" relationship="viewControllers" id="Spw-P6-uvj"/>
+                        <segue destination="0hn-4e-nNK" kind="relationship" relationship="viewControllers" id="h2u-7c-Fcy"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PEA-3L-dlX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1174" y="759"/>
+        </scene>
+        <!--Tercera View Controller-->
+        <scene sceneID="DdL-iq-0RF">
+            <objects>
+                <viewController id="dGp-kG-dJ5" customClass="TerceraViewController" customModule="AppDatePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5lh-W9-gzX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Localidades de Madrid" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tIE-9h-Plk">
+                                <rect key="frame" x="20" y="130" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Código postal de tu zona" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bGC-cc-9Hs">
+                                <rect key="frame" x="20" y="192" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Prioridad del trabajo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ueN-Dk-zXE">
+                                <rect key="frame" x="20" y="255" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fvp-sg-bq0">
+                                <rect key="frame" x="20" y="322" width="374" height="173"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xNs-No-uYx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8mH-JO-QfF"/>
+                    <connections>
+                        <outlet property="imagenPerfil" destination="fvp-sg-bq0" id="P2l-7t-3vi"/>
+                        <outlet property="madridTF" destination="tIE-9h-Plk" id="NXS-Fb-15O"/>
+                        <outlet property="postalTF" destination="bGC-cc-9Hs" id="WW9-Gx-z2G"/>
+                        <outlet property="prioridadTF" destination="ueN-Dk-zXE" id="uUa-qT-MiN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nwE-wZ-h5P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="1447.7678571428571"/>
+        </scene>
+        <!--DatePicker-->
+        <scene sceneID="KVD-hu-nVs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="N4I-3W-1If" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="DatePicker" id="MMp-nD-dcF"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wfV-XF-8A8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ngN-q8-EDK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6dB-Tm-v2L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="83.705357142857139"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="3Ct-hG-A3T">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jUK-qZ-3Ve" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="bqg-tO-kjM"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fBv-LP-DWW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="f2h-PF-aRW" kind="relationship" relationship="rootViewController" id="8av-ZK-jL2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DtB-jt-Vhz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="758.70535714285711"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="o2x-pr-v0J">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0hn-4e-nNK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="mzx-3v-krX"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FIg-Vg-exI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dGp-kG-dJ5" kind="relationship" relationship="rootViewController" id="6rA-Qw-V8m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XhW-xs-YLZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="1447.7678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
