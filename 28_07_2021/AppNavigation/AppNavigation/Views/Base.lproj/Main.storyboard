@@ -299,6 +299,9 @@
                                 <state key="normal" title="Enviar mail">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="enviaMail:" destination="SXw-MI-ckE" eventType="touchUpInside" id="ens-ad-TCN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="D2B-e3-Pe2"/>

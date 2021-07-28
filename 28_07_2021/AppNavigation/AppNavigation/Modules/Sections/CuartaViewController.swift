@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class CuartaViewController: UIViewController {
     
@@ -22,6 +23,16 @@ class CuartaViewController: UIViewController {
     @IBOutlet weak var ciudadLbl: UILabel!
     @IBOutlet weak var posGeoLbl: UILabel!
     
+    
+    // MARK: - IBActions
+    @IBAction func enviaMail(_ sender: Any) {
+        if MFMailComposeViewController.canSendMail() {
+            present(configuracionMailComposeVC(), animated: true, completion: nil)
+        } else {
+            present(displayAlertVC(myTitle: "Eerror", myMessage: "No puedes enviar el email"), animated: true, completion: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,15 +47,24 @@ class CuartaViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func configuracionMailComposeVC() -> MFMailComposeViewController{
+        
+        let mailCompose = MFMailComposeViewController()
+        
+        mailCompose.mailComposeDelegate = self
+        mailCompose.setToRecipients([""])
+        mailCompose.setSubject("SUBJECT")
+        let emailBody = "Hola colegui"
+        mailCompose.setMessageBody(emailBody, isHTML: false)
+        
+        return mailCompose
     }
-    */
 
+}
+
+extension CuartaViewController: MFMailComposeViewControllerDelegate {
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
 }

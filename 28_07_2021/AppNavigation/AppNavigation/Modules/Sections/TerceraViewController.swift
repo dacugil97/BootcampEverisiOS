@@ -34,9 +34,9 @@ class TerceraViewController: UIViewController {
         self.direccionLbl.text = variables.direccionData
         self.edadPerroLbl.text = variables.edadPerroData
         
-        createPickerView(myTag: 0, myTextFieldCustom: postalTF, myArray: codigosPostalesDS)
-        createPickerView(myTag: 1, myTextFieldCustom: ciudadTF, myArray: ciudadesDS)
-        createPickerView(myTag: 2, myTextFieldCustom: posGeoTF, myArray: posicionesDS)
+        createPickerView(myTag: 0, myTextFieldCustom: postalTF, myArray: codigosPostalesDS, myDelegate: self, myDataSource: self)
+        createPickerView(myTag: 1, myTextFieldCustom: ciudadTF, myArray: ciudadesDS, myDelegate: self, myDataSource: self)
+        createPickerView(myTag: 2, myTextFieldCustom: posGeoTF, myArray: posicionesDS, myDelegate: self, myDataSource: self)
         
     }
     
@@ -58,6 +58,8 @@ class TerceraViewController: UIViewController {
         }
     }
     
+    /**
+    
     private func createPickerView(myTag: Int, myTextFieldCustom: UITextField, myArray: [String]){
         let pickerView = UIPickerView()
         pickerView.delegate = self
@@ -66,7 +68,7 @@ class TerceraViewController: UIViewController {
         myTextFieldCustom.inputView = pickerView
         myTextFieldCustom.text = myArray[0]
     }
-    
+    **/
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }

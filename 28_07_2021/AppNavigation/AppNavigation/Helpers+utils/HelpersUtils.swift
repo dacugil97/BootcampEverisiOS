@@ -15,19 +15,17 @@ func displayAlertVC(myTitle: String, myMessage: String) -> UIAlertController {
     return alertVC
 }
 
-func createPickerView(myTextField: UITextField,
+func createPickerView(myTag: Int,
+                      myTextFieldCustom: UITextField,
                       myArray: [String],
-                      myTag: Int,
                       myDelegate: UIPickerViewDelegate,
-                      myDataSource: UIPickerViewDataSource) -> UIPickerView {
+                      myDataSource: UIPickerViewDataSource){
     let pickerView = UIPickerView()
     pickerView.delegate = myDelegate
     pickerView.dataSource = myDataSource
     pickerView.tag = myTag
-    myTextField.inputView = pickerView
-    myTextField.text = myArray[0]
-    
-    return pickerView
+    myTextFieldCustom.inputView = pickerView
+    myTextFieldCustom.text = myArray[0]
 }
 
 struct GlobalUserData {
