@@ -37,7 +37,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="YUi-m5-vWg" kind="show" id="vdd-dm-c4c"/>
+                                    <segue destination="YUi-m5-vWg" kind="show" identifier="segueV2" id="vdd-dm-c4c"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -45,15 +45,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="AYt-S2-8XB"/>
+                    <connections>
+                        <outlet property="apellidoTF" destination="fQ2-cd-QRj" id="9MP-yU-q3M"/>
+                        <outlet property="nombreTF" destination="lxe-Ap-QYT" id="Szw-Ly-3H2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="955.07246376811599" y="83.705357142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Segunda View Controller-->
         <scene sceneID="OF8-c0-bAD">
             <objects>
-                <viewController id="YUi-m5-vWg" sceneMemberID="viewController">
+                <viewController id="YUi-m5-vWg" customClass="SegundaViewController" customModule="AppNavigation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XcK-0h-7jr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,7 +80,7 @@
                                 <rect key="frame" x="20" y="225" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dirección" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cjm-Sz-RwV">
                                 <rect key="frame" x="20" y="283" width="374" height="34"/>
@@ -88,16 +92,26 @@
                                 <rect key="frame" x="20" y="339" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6A-Ye-tVh">
-                                <rect key="frame" x="24" y="415" width="366" height="38"/>
+                                <rect key="frame" x="24" y="443" width="366" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.15415000109999999" green="0.26662692939999999" blue="0.28282385760000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Calcular edad del perro">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="calculaEdadPerro:" destination="YUi-m5-vWg" eventType="touchUpInside" id="PCP-4u-mGS"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edad Perro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5z-jR-puu">
+                                <rect key="frame" x="20" y="400" width="362" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nqB-bf-LKf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -105,19 +119,27 @@
                     <navigationItem key="navigationItem" id="jjD-o4-2gw">
                         <barButtonItem key="rightBarButtonItem" title="ir a ventana 3" id="ldU-4c-CBT">
                             <connections>
-                                <segue destination="8Fb-dK-Qcb" kind="show" id="4lN-9Q-nZr"/>
+                                <segue destination="8Fb-dK-Qcb" kind="show" identifier="segueV3" id="4lN-9Q-nZr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="apellidoLbl" destination="Y1B-FW-Elh" id="rJ5-eZ-16J"/>
+                        <outlet property="direccionTF" destination="Cjm-Sz-RwV" id="qVi-Qg-fvR"/>
+                        <outlet property="edadPerroLbl" destination="O5z-jR-puu" id="a64-OZ-Vzg"/>
+                        <outlet property="edadPerroTF" destination="tqe-t5-h3D" id="i9T-nr-wMY"/>
+                        <outlet property="movilTF" destination="gef-l9-q3T" id="TBh-dy-Qrh"/>
+                        <outlet property="nombreLbl" destination="nXx-ZE-Gd9" id="ZdB-LI-8Hk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aX2-iM-0x2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1905.7971014492755" y="83.705357142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Tercera View Controller-->
         <scene sceneID="rwQ-wy-uZ5">
             <objects>
-                <viewController id="8Fb-dK-Qcb" sceneMemberID="viewController">
+                <viewController id="8Fb-dK-Qcb" customClass="TerceraViewController" customModule="AppNavigation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qzd-7F-2u9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,7 +198,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="SXw-MI-ckE" kind="show" id="Ib2-Bt-uRo"/>
+                                    <segue destination="SXw-MI-ckE" kind="show" identifier="segueV4" id="Ib2-Bt-uRo"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edad del perrete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFU-5x-wLT">
@@ -191,15 +213,25 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="jgY-q1-Vrk"/>
+                    <connections>
+                        <outlet property="apellidoLbl" destination="2dz-zX-teb" id="ArB-af-wT2"/>
+                        <outlet property="ciudadTF" destination="L4j-M4-Ul2" id="zVT-gY-QZA"/>
+                        <outlet property="direccionLbl" destination="tC2-Ws-cBc" id="ypJ-gF-wtM"/>
+                        <outlet property="edadPerroLbl" destination="DFU-5x-wLT" id="kIm-oU-4ED"/>
+                        <outlet property="movilLbl" destination="GPD-gM-LBy" id="y1P-R8-1QU"/>
+                        <outlet property="nombreLbl" destination="L8E-Ja-XnY" id="hqP-CZ-cal"/>
+                        <outlet property="posGeoTF" destination="ON8-9g-ao4" id="2VN-Jr-7NB"/>
+                        <outlet property="postalTF" destination="E1E-hb-P5T" id="tbz-3M-2hx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xwj-hI-d1h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2832" y="84"/>
         </scene>
-        <!--View Controller-->
+        <!--Cuarta View Controller-->
         <scene sceneID="UkJ-Fj-Kpg">
             <objects>
-                <viewController id="SXw-MI-ckE" sceneMemberID="viewController">
+                <viewController id="SXw-MI-ckE" customClass="CuartaViewController" customModule="AppNavigation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PPz-J9-bJs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -273,8 +305,22 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="uBb-Sp-7Zi">
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Et2-br-Xty"/>
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Et2-br-Xty">
+                            <connections>
+                                <segue destination="uKV-Vr-JbY" kind="unwind" unwindAction="cerrarVCsWithSegue:" id="2AF-4A-uuw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="apellidoLbl" destination="caS-a4-Tlt" id="i2O-eH-JHL"/>
+                        <outlet property="ciudadLbl" destination="3MW-ms-4lg" id="fuw-2p-eGm"/>
+                        <outlet property="direccionLbl" destination="mgZ-Io-JUH" id="R8f-Hf-ehR"/>
+                        <outlet property="edadPerroLbl" destination="nkz-Qh-AuQ" id="zdl-m8-5fb"/>
+                        <outlet property="movilLbl" destination="TBk-YJ-dRR" id="PEg-sn-es0"/>
+                        <outlet property="nombreLbl" destination="CTp-VX-4Lb" id="Ejo-DO-Ejt"/>
+                        <outlet property="posGeoLbl" destination="ex8-xN-a3n" id="eLd-BA-YXc"/>
+                        <outlet property="postalLbl" destination="Lk5-gT-jOq" id="qj7-Zn-uqF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VKx-xg-7gf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -295,6 +341,7 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVA-Nd-rUd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="uKV-Vr-JbY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="44.927536231884062" y="83.705357142857139"/>
         </scene>
