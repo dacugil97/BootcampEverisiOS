@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="AppTableViewChallenge" customModuleProvider="target">
+            <connections>
+                <outlet property="dia1Lbl" destination="97m-NF-5Rc" id="NEU-YR-Rg8"/>
+                <outlet property="dia2Lbl" destination="MGk-aO-Wgd" id="hy1-dF-ewG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="HOY ES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCO-0v-lqf">
+                    <rect key="frame" x="155.5" y="110" width="103.5" height="52"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ATREVETE CON LOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYc-MX-Mza">
+                    <rect key="frame" x="69.5" y="316" width="275" height="52"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="DÍA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97m-NF-5Rc">
+                    <rect key="frame" x="180" y="196" width="54.5" height="52"/>
+                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                    <color key="textColor" red="0.15415000109999999" green="0.26662692939999999" blue="0.28282385760000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="DÍA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGk-aO-Wgd">
+                    <rect key="frame" x="171" y="466" width="72.5" height="63"/>
+                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
+                    <color key="textColor" red="0.15415000109999999" green="0.26662692939999999" blue="0.28282385760000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="VCO-0v-lqf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PAG-0m-M0v"/>
+                <constraint firstItem="gYc-MX-Mza" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WFz-AY-It5"/>
+                <constraint firstItem="97m-NF-5Rc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fBo-y0-mqq"/>
+                <constraint firstItem="MGk-aO-Wgd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xfj-V1-DXd"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="94.419642857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
