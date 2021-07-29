@@ -20,27 +20,27 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="HOY ES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCO-0v-lqf">
-                    <rect key="frame" x="155.5" y="110" width="103.5" height="52"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOY ES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCO-0v-lqf">
+                    <rect key="frame" x="20" y="119" width="374" height="36"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ATREVETE CON LOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYc-MX-Mza">
-                    <rect key="frame" x="69.5" y="316" width="275" height="52"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATREVETE CON LOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYc-MX-Mza">
+                    <rect key="frame" x="70" y="351" width="275" height="36"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="DÍA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97m-NF-5Rc">
-                    <rect key="frame" x="180" y="196" width="54.5" height="52"/>
-                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DÍA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGk-aO-Wgd">
+                    <rect key="frame" x="20" y="466" width="374" height="48"/>
+                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
                     <color key="textColor" red="0.15415000109999999" green="0.26662692939999999" blue="0.28282385760000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="DÍA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGk-aO-Wgd">
-                    <rect key="frame" x="171" y="466" width="72.5" height="63"/>
-                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DÍA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97m-NF-5Rc">
+                    <rect key="frame" x="20" y="220" width="374" height="36"/>
+                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
                     <color key="textColor" red="0.15415000109999999" green="0.26662692939999999" blue="0.28282385760000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -48,10 +48,18 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="VCO-0v-lqf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PAG-0m-M0v"/>
-                <constraint firstItem="gYc-MX-Mza" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WFz-AY-It5"/>
-                <constraint firstItem="97m-NF-5Rc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fBo-y0-mqq"/>
-                <constraint firstItem="MGk-aO-Wgd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xfj-V1-DXd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VCO-0v-lqf" secondAttribute="trailing" constant="20" id="FsP-Zz-tzY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gYc-MX-Mza" secondAttribute="trailing" constant="69" id="Grn-Zc-GWE"/>
+                <constraint firstItem="gYc-MX-Mza" firstAttribute="top" secondItem="97m-NF-5Rc" secondAttribute="bottom" constant="95" id="N7y-Kx-XbG"/>
+                <constraint firstItem="97m-NF-5Rc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Vgg-Kg-tm0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="97m-NF-5Rc" secondAttribute="trailing" constant="20" id="Xms-0p-BSN"/>
+                <constraint firstItem="MGk-aO-Wgd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="aEP-O5-cAt"/>
+                <constraint firstItem="VCO-0v-lqf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="aTr-GL-IcO"/>
+                <constraint firstItem="97m-NF-5Rc" firstAttribute="top" secondItem="VCO-0v-lqf" secondAttribute="bottom" constant="65" id="bc3-mZ-C4L"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MGk-aO-Wgd" secondAttribute="trailing" constant="20" id="ftr-mm-KOA"/>
+                <constraint firstItem="MGk-aO-Wgd" firstAttribute="top" secondItem="gYc-MX-Mza" secondAttribute="bottom" constant="79" id="l1a-Lx-TeR"/>
+                <constraint firstItem="VCO-0v-lqf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="75" id="q2T-oK-axG"/>
+                <constraint firstItem="gYc-MX-Mza" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="70" id="vbA-CJ-zgA"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="94.419642857142847"/>
         </view>
