@@ -21,8 +21,6 @@ class ListaCochesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter?.setArrayData()
-        setupTableView()
         // Do any additional setup after loading the view.
     }
     
