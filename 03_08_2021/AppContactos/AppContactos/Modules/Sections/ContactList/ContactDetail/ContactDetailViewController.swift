@@ -33,11 +33,12 @@ class ContactDetailViewController: UIViewController {
             self.apellidoLbl.text = modelData.lastName
         }
         
-        /*
+        
         buttons.forEach { button in
-            button.imageEdgeInsets = UIEdgeInsets(top: 30, left: 50, bottom: 30, right: 50)
+            //button.imageEdgeInsets = UIEdgeInsets(top: 30, left: 50, bottom: 30, right: 50)
+            button.tintColor = UIColor.green
         }
- */
+ 
     }
 
 }
