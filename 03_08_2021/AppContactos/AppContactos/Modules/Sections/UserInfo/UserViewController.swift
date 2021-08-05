@@ -72,6 +72,7 @@ class UserViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         if let imageData = Utils.UserDefaultDDBB.prefs.object(forKey: Utils.Constantes.imagenPerfil) as? Data {
             self.imagenPerfil.image = UIImage(data: imageData)
         }

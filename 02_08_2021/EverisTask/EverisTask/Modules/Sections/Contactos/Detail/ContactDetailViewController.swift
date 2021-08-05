@@ -30,7 +30,7 @@ class ContactDetailViewController: UIViewController {
     private func setupTableView() {
         self.contactDetailTV.delegate = self
         self.contactDetailTV.dataSource = self
-        self.contactDetailTV.register(UINib(nibName: "ContactsTableViewCell", bundle: nil), forCellReuseIdentifier: "ContactsTableViewCell")
+        self.contactDetailTV.register(UINib(nibName: "ContactDetailCell", bundle: nil), forCellReuseIdentifier: "ContactDetailCell")
     }
 }
 
@@ -46,12 +46,15 @@ extension ContactDetailViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellContactos = self.contactDetailTV.dequeueReusableCell(withIdentifier: "ContactsTableViewCell", for: indexPath) as! ContactsTableViewCell
+        let cellContactos = self.contactDetailTV.dequeueReusableCell(withIdentifier: "ContactDetailCell", for: indexPath) as! ContactDetailCell
         if let modelData = self.presenter?.informationData(){
-            cellContactos.configCell(data: modelData)
+            cellContactos.configCell(model: modelData)
         }
         return cellContactos
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
+    }
     
 }
