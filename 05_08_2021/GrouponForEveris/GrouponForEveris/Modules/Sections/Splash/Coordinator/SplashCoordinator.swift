@@ -19,16 +19,29 @@ final class SplashCoordinator {
         return vc
     }
     
+    /*
+    static func presenter(vc: SplashViewController) -> SplashPresenterProtocol & SplashInteractorOutputProtocol {
+        let presenter = SplashPresenter(vc: vc)
+        presenter.router = router()
+        presenter.interactor = interactor(pre: presenter)
+        return presenter
+    }
+    */
+    
     static func presenter(vc: SplashViewController) -> SplashPresenterProtocol {
-        let presenter = SplashPresenter(vc: vc, router: router(), interactor: interactor())
+        let presenter = SplashPresenter(vc: vc)
+        presenter.router = router()
+        presenter.interactor = interactor(pre: presenter)
         return presenter
     }
     
-    static func interactor() -> SplashInteractorProtocol {
-        SplashInteractor()
+    static func interactor(pre: SplashPresenter) -> SplashInteractorProtocol {
+        let interactor = SplashInteractor(presenter: pre)
+        return interactor
     }
     
     static func router() -> SplashRouterProtocol {
         SplashRouter()
     }
+    
 }
