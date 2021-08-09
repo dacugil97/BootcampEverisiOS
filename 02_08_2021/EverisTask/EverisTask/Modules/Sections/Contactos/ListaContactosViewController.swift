@@ -46,11 +46,11 @@ extension ListaContactosViewController: ListaContactosViewControllerProtocol {
     func reloadDataInView() {
         self.listaContactosTV.reloadData()
     }
-    
-    
+
 }
 
 extension ListaContactosViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.presenter?.numberOfRowsInSection() ?? 0
     }
