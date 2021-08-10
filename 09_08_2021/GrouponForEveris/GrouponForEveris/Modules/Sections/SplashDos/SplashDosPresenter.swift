@@ -12,7 +12,7 @@ protocol SplashDosPresenterRouterInterface: PresenterRouterInterface {
 }
 
 protocol SplashDosPresenterInteractorInterface: PresenterInteractorInterface {
-    func getDataFromInteractor(data: [CardBusinessModel]?)
+    func getDataFromInteractor(data: [DataViewModel]?)
 }
 
 protocol SplashDosPresenterViewInterface: PresenterViewInterface {
@@ -25,7 +25,7 @@ final class SplashDosPresenter: PresenterInterface {
     var interactor: SplashDosInteractorPresenterInterface!
     weak var view: SplashDosViewPresenterInterface!
     
-    var arrayData: [CardBusinessModel] = []
+    var arrayData: [CardViewModel] = []
     
 }
 
@@ -34,10 +34,9 @@ extension SplashDosPresenter: SplashDosPresenterRouterInterface {
 }
 
 extension SplashDosPresenter: SplashDosPresenterInteractorInterface {
-    func getDataFromInteractor(data: [CardBusinessModel]?) {
-        if let dataDes = data{
-            self.arrayData = dataDes
-            self.view.reloadInformationInView()
+    func getDataFromInteractor(data: [DataViewModel]?) {
+        if let dataDes = data {
+            self.router.showHomeTabBar(data: dataDes)
         }
     }
 }
