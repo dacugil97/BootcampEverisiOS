@@ -26,58 +26,34 @@ POSSIBILITY OF SUCH DAMAGE.
 */
 
 import Foundation
+import UIKit
 
-protocol ListaGrouponPresenterRouterInterface: PresenterRouterInterface {
-    
-}
+// MARK: - module builder
 
-protocol ListaGrouponPresenterInteractorInterface: PresenterInteractorInterface {
+final class DetalleListaGrouponCoordinator: ModuleInterface {
     
-}
-
-protocol ListaGrouponPresenterViewInterface: PresenterViewInterface {
+    typealias View = DetalleListaGrouponViewController
+    typealias Presenter = DetalleListaGrouponPresenter
+    typealias Router = DetalleListaGrouponRouter
+    typealias Interactor = DetalleListaGrouponInteractor
     
-    func numberOfRows() -> Int
-    func objectFrom(index: Int) -> CardViewModel?
-    func updateView()
-    func showDetailVC(index: Int)
-}
-
-final class ListaGrouponPresenter: PresenterInterface {
-    
-    var router: ListaGrouponRouterPresenterInterface!
-    var interactor: ListaGrouponInteractorPresenterInterface!
-    weak var view: ListaGrouponViewPresenterInterface!
-    
-    var arrayData: [DataViewModel] = []
-    
-}
-
-extension ListaGrouponPresenter: ListaGrouponPresenterRouterInterface {
-    
-}
-
-extension ListaGrouponPresenter: ListaGrouponPresenterInteractorInterface {
-    
-}
-
-extension ListaGrouponPresenter: ListaGrouponPresenterViewInterface {
-    func showDetailVC(index: Int) {
-        if let dataDes = arrayData[index].data {
-            self.router.showDetailVC(data: dataDes)
-        }
+    func navigation() -> UINavigationController {
+        UINavigationController(rootViewController: build())
     }
-    
-    func updateView() {
-        self.view.reloadInformationInView()
+
+    func build(dto: DetalleListaGrouponCoordinatorDTO? = nil) -> UIViewController {
+        let view = View()
+        let interactor = Interactor()
+        let presenter = Presenter()
+        presenter.dataModel = dto?.dataModel
+        let router = Router()
+        self.coordinator(view: view, presenter: presenter, router: router, interactor: interactor)
+        router.viewController = view
+        return view
     }
+}
+
+struct DetalleListaGrouponCoordinatorDTO {
     
-    func objectFrom(index: Int) -> CardViewModel? {
-        self.arrayData[index].data
-    }
-    
-    func numberOfRows() -> Int {
-        self.arrayData.count
-       
-    }
+    var dataModel: CardViewModel
 }

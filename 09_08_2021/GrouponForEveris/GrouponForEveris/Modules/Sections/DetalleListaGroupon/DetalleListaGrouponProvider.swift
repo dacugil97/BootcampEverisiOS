@@ -27,57 +27,19 @@ POSSIBILITY OF SUCH DAMAGE.
 
 import Foundation
 
-protocol ListaGrouponPresenterRouterInterface: PresenterRouterInterface {
+protocol DetalleListaGrouponProviderProtocol{
     
 }
 
-protocol ListaGrouponPresenterInteractorInterface: PresenterInteractorInterface {
+class DetalleListaGrouponProvider{
     
+    let networkService: NetworkServiceProtocol = NetworkService()
 }
 
-protocol ListaGrouponPresenterViewInterface: PresenterViewInterface {
-    
-    func numberOfRows() -> Int
-    func objectFrom(index: Int) -> CardViewModel?
-    func updateView()
-    func showDetailVC(index: Int)
+extension DetalleListaGrouponProvider: DetalleListaGrouponProviderProtocol {
+
 }
 
-final class ListaGrouponPresenter: PresenterInterface {
-    
-    var router: ListaGrouponRouterPresenterInterface!
-    var interactor: ListaGrouponInteractorPresenterInterface!
-    weak var view: ListaGrouponViewPresenterInterface!
-    
-    var arrayData: [DataViewModel] = []
-    
-}
+struct DetalleListaGrouponProviderRequestDTO {
 
-extension ListaGrouponPresenter: ListaGrouponPresenterRouterInterface {
-    
-}
-
-extension ListaGrouponPresenter: ListaGrouponPresenterInteractorInterface {
-    
-}
-
-extension ListaGrouponPresenter: ListaGrouponPresenterViewInterface {
-    func showDetailVC(index: Int) {
-        if let dataDes = arrayData[index].data {
-            self.router.showDetailVC(data: dataDes)
-        }
-    }
-    
-    func updateView() {
-        self.view.reloadInformationInView()
-    }
-    
-    func objectFrom(index: Int) -> CardViewModel? {
-        self.arrayData[index].data
-    }
-    
-    func numberOfRows() -> Int {
-        self.arrayData.count
-       
-    }
 }

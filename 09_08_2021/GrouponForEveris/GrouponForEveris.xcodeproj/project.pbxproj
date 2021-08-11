@@ -12,6 +12,22 @@
 		205B6A4326C1339700FFE260 /* CuponCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 205B6A4126C1339700FFE260 /* CuponCell.xib */; };
 		205B6A4526C13A5A00FFE260 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A4426C13A5A00FFE260 /* CardViewModel.swift */; };
 		205B6A4726C3AA2100FFE260 /* DDBBCoreStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A4626C3AA2100FFE260 /* DDBBCoreStack.swift */; };
+		205B6A5026C3C5C900FFE260 /* DetalleListaGrouponViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 205B6A4926C3C5C900FFE260 /* DetalleListaGrouponViewController.xib */; };
+		205B6A5126C3C5C900FFE260 /* DetalleListaGrouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A4A26C3C5C900FFE260 /* DetalleListaGrouponViewController.swift */; };
+		205B6A5226C3C5C900FFE260 /* DetalleListaGrouponRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A4B26C3C5C900FFE260 /* DetalleListaGrouponRouter.swift */; };
+		205B6A5326C3C5C900FFE260 /* DetalleListaGrouponProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A4C26C3C5C900FFE260 /* DetalleListaGrouponProvider.swift */; };
+		205B6A5426C3C5C900FFE260 /* DetalleListaGrouponCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A4D26C3C5C900FFE260 /* DetalleListaGrouponCoordinator.swift */; };
+		205B6A5526C3C5C900FFE260 /* DetalleListaGrouponPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A4E26C3C5C900FFE260 /* DetalleListaGrouponPresenter.swift */; };
+		205B6A5626C3C5C900FFE260 /* DetalleListaGrouponInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A4F26C3C5C900FFE260 /* DetalleListaGrouponInteractor.swift */; };
+		205B6A5A26C3CE2000FFE260 /* DescriptorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A5826C3CE2000FFE260 /* DescriptorTableViewCell.swift */; };
+		205B6A5B26C3CE2000FFE260 /* DescriptorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 205B6A5926C3CE2000FFE260 /* DescriptorTableViewCell.xib */; };
+		205B6A5E26C3CE2F00FFE260 /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A5C26C3CE2F00FFE260 /* MapTableViewCell.swift */; };
+		205B6A5F26C3CE2F00FFE260 /* MapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 205B6A5D26C3CE2F00FFE260 /* MapTableViewCell.xib */; };
+		205B6A6226C3CE3900FFE260 /* LinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A6026C3CE3900FFE260 /* LinkTableViewCell.swift */; };
+		205B6A6326C3CE3900FFE260 /* LinkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 205B6A6126C3CE3900FFE260 /* LinkTableViewCell.xib */; };
+		205B6A6726C3DE0300FFE260 /* GenericWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A6526C3DE0300FFE260 /* GenericWebViewController.swift */; };
+		205B6A6826C3DE0300FFE260 /* GenericWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 205B6A6626C3DE0300FFE260 /* GenericWebViewController.xib */; };
+		205B6A6A26C3DE1300FFE260 /* GenericWebViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A6926C3DE1300FFE260 /* GenericWebViewCoordinator.swift */; };
 		20AC5E0326C102F4006EFD53 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AC5E0126C102F4006EFD53 /* HomeTabBarViewController.swift */; };
 		20AC5E0426C102F4006EFD53 /* HomeTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20AC5E0226C102F4006EFD53 /* HomeTabBarViewController.xib */; };
 		20AC5E0626C10334006EFD53 /* HomeTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AC5E0526C10334006EFD53 /* HomeTabBarCoordinator.swift */; };
@@ -54,6 +70,22 @@
 		205B6A4126C1339700FFE260 /* CuponCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CuponCell.xib; sourceTree = "<group>"; };
 		205B6A4426C13A5A00FFE260 /* CardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		205B6A4626C3AA2100FFE260 /* DDBBCoreStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDBBCoreStack.swift; sourceTree = "<group>"; };
+		205B6A4926C3C5C900FFE260 /* DetalleListaGrouponViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetalleListaGrouponViewController.xib; sourceTree = "<group>"; };
+		205B6A4A26C3C5C900FFE260 /* DetalleListaGrouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleListaGrouponViewController.swift; sourceTree = "<group>"; };
+		205B6A4B26C3C5C900FFE260 /* DetalleListaGrouponRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleListaGrouponRouter.swift; sourceTree = "<group>"; };
+		205B6A4C26C3C5C900FFE260 /* DetalleListaGrouponProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleListaGrouponProvider.swift; sourceTree = "<group>"; };
+		205B6A4D26C3C5C900FFE260 /* DetalleListaGrouponCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleListaGrouponCoordinator.swift; sourceTree = "<group>"; };
+		205B6A4E26C3C5C900FFE260 /* DetalleListaGrouponPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleListaGrouponPresenter.swift; sourceTree = "<group>"; };
+		205B6A4F26C3C5C900FFE260 /* DetalleListaGrouponInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleListaGrouponInteractor.swift; sourceTree = "<group>"; };
+		205B6A5826C3CE2000FFE260 /* DescriptorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptorTableViewCell.swift; sourceTree = "<group>"; };
+		205B6A5926C3CE2000FFE260 /* DescriptorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptorTableViewCell.xib; sourceTree = "<group>"; };
+		205B6A5C26C3CE2F00FFE260 /* MapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
+		205B6A5D26C3CE2F00FFE260 /* MapTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapTableViewCell.xib; sourceTree = "<group>"; };
+		205B6A6026C3CE3900FFE260 /* LinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkTableViewCell.swift; sourceTree = "<group>"; };
+		205B6A6126C3CE3900FFE260 /* LinkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LinkTableViewCell.xib; sourceTree = "<group>"; };
+		205B6A6526C3DE0300FFE260 /* GenericWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericWebViewController.swift; sourceTree = "<group>"; };
+		205B6A6626C3DE0300FFE260 /* GenericWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericWebViewController.xib; sourceTree = "<group>"; };
+		205B6A6926C3DE1300FFE260 /* GenericWebViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericWebViewCoordinator.swift; sourceTree = "<group>"; };
 		20AC5E0126C102F4006EFD53 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
 		20AC5E0226C102F4006EFD53 /* HomeTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabBarViewController.xib; sourceTree = "<group>"; };
 		20AC5E0526C10334006EFD53 /* HomeTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarCoordinator.swift; sourceTree = "<group>"; };
@@ -113,6 +145,44 @@
 				205B6A4126C1339700FFE260 /* CuponCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		205B6A4826C3C5B500FFE260 /* DetalleListaGroupon */ = {
+			isa = PBXGroup;
+			children = (
+				205B6A5726C3CE0D00FFE260 /* Cells */,
+				205B6A4926C3C5C900FFE260 /* DetalleListaGrouponViewController.xib */,
+				205B6A4A26C3C5C900FFE260 /* DetalleListaGrouponViewController.swift */,
+				205B6A4B26C3C5C900FFE260 /* DetalleListaGrouponRouter.swift */,
+				205B6A4C26C3C5C900FFE260 /* DetalleListaGrouponProvider.swift */,
+				205B6A4D26C3C5C900FFE260 /* DetalleListaGrouponCoordinator.swift */,
+				205B6A4E26C3C5C900FFE260 /* DetalleListaGrouponPresenter.swift */,
+				205B6A4F26C3C5C900FFE260 /* DetalleListaGrouponInteractor.swift */,
+			);
+			path = DetalleListaGroupon;
+			sourceTree = "<group>";
+		};
+		205B6A5726C3CE0D00FFE260 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				205B6A5826C3CE2000FFE260 /* DescriptorTableViewCell.swift */,
+				205B6A5926C3CE2000FFE260 /* DescriptorTableViewCell.xib */,
+				205B6A5C26C3CE2F00FFE260 /* MapTableViewCell.swift */,
+				205B6A5D26C3CE2F00FFE260 /* MapTableViewCell.xib */,
+				205B6A6026C3CE3900FFE260 /* LinkTableViewCell.swift */,
+				205B6A6126C3CE3900FFE260 /* LinkTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		205B6A6426C3DDB900FFE260 /* GenericWebView */ = {
+			isa = PBXGroup;
+			children = (
+				205B6A6526C3DE0300FFE260 /* GenericWebViewController.swift */,
+				205B6A6626C3DE0300FFE260 /* GenericWebViewController.xib */,
+				205B6A6926C3DE1300FFE260 /* GenericWebViewCoordinator.swift */,
+			);
+			path = GenericWebView;
 			sourceTree = "<group>";
 		};
 		206B33C526C0FFC700884B5F /* HomeTabBar */ = {
@@ -237,6 +307,8 @@
 		B4E6C81926BBC2A100A251BA /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				205B6A6426C3DDB900FFE260 /* GenericWebView */,
+				205B6A4826C3C5B500FFE260 /* DetalleListaGroupon */,
 				20AC5E0726C103C5006EFD53 /* ListaGroupon */,
 				206B33C526C0FFC700884B5F /* HomeTabBar */,
 				B4E9619326BD1A9D007238AA /* SplashDos */,
@@ -374,13 +446,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				205B6A5F26C3CE2F00FFE260 /* MapTableViewCell.xib in Resources */,
 				B4E9619726BD1AF9007238AA /* SplashDosViewController.xib in Resources */,
 				205B6A3C26C12DCE00FFE260 /* ListaGrouponViewController.xib in Resources */,
+				205B6A6326C3CE3900FFE260 /* LinkTableViewCell.xib in Resources */,
 				20AC5E0426C102F4006EFD53 /* HomeTabBarViewController.xib in Resources */,
 				205B6A4326C1339700FFE260 /* CuponCell.xib in Resources */,
 				B4E6C80126BBB91900A251BA /* LaunchScreen.storyboard in Resources */,
+				205B6A6826C3DE0300FFE260 /* GenericWebViewController.xib in Resources */,
 				B4E9616F26BBF6C5007238AA /* GenericCell.xib in Resources */,
+				205B6A5B26C3CE2000FFE260 /* DescriptorTableViewCell.xib in Resources */,
 				B4E6C81E26BBC2C700A251BA /* SplashViewController.xib in Resources */,
+				205B6A5026C3C5C900FFE260 /* DetalleListaGrouponViewController.xib in Resources */,
 				B4E6C7FE26BBB91900A251BA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,11 +511,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				205B6A5526C3C5C900FFE260 /* DetalleListaGrouponPresenter.swift in Sources */,
 				B4E9619D26BD1B84007238AA /* SplashDosPresenter.swift in Sources */,
 				205B6A4726C3AA2100FFE260 /* DDBBCoreStack.swift in Sources */,
+				205B6A6A26C3DE1300FFE260 /* GenericWebViewCoordinator.swift in Sources */,
 				20AC5E0626C10334006EFD53 /* HomeTabBarCoordinator.swift in Sources */,
 				B4E6C83D26BBCACD00A251BA /* AppCoordinator.swift in Sources */,
 				20AC5E3B26C1173A006EFD53 /* ListaGrouponCoordinator.swift in Sources */,
+				205B6A5E26C3CE2F00FFE260 /* MapTableViewCell.swift in Sources */,
 				B4E6C84526BBD29C00A251BA /* NetworkError.swift in Sources */,
 				205B6A4526C13A5A00FFE260 /* CardViewModel.swift in Sources */,
 				B4E6C81D26BBC2C700A251BA /* SplashViewController.swift in Sources */,
@@ -448,8 +528,11 @@
 				B4E6C7F526BBB91700A251BA /* AppDelegate.swift in Sources */,
 				B4E6C84826BBDB3600A251BA /* EverGrouponServerModel.swift in Sources */,
 				B4E6C82426BBC2F600A251BA /* SplashInteractor.swift in Sources */,
+				205B6A5626C3C5C900FFE260 /* DetalleListaGrouponInteractor.swift in Sources */,
+				205B6A5126C3C5C900FFE260 /* DetalleListaGrouponViewController.swift in Sources */,
 				20AC5E3C26C1173A006EFD53 /* ListaGrouponInteractor.swift in Sources */,
 				20AC5E3726C1173A006EFD53 /* ListaGrouponRouter.swift in Sources */,
+				205B6A5A26C3CE2000FFE260 /* DescriptorTableViewCell.swift in Sources */,
 				20AC5E0326C102F4006EFD53 /* HomeTabBarViewController.swift in Sources */,
 				B4E9619A26BD1B13007238AA /* SplashDosCoordinator.swift in Sources */,
 				20AC5E3A26C1173A006EFD53 /* ListaGrouponPresenter.swift in Sources */,
@@ -459,9 +542,14 @@
 				20AC5E3926C1173A006EFD53 /* ListaGrouponProvider.swift in Sources */,
 				B4E6C82B26BBC32600A251BA /* SplashCoordinator.swift in Sources */,
 				B4E6C81626BBBD7500A251BA /* BaseVIPER.swift in Sources */,
+				205B6A5326C3C5C900FFE260 /* DetalleListaGrouponProvider.swift in Sources */,
+				205B6A5426C3C5C900FFE260 /* DetalleListaGrouponCoordinator.swift in Sources */,
 				B4E6C84226BBD05300A251BA /* NetworkService.swift in Sources */,
 				B4E6C84C26BBDB8E00A251BA /* SplashProvider.swift in Sources */,
 				B4E6C82126BBC2DB00A251BA /* SplashPresenter.swift in Sources */,
+				205B6A6726C3DE0300FFE260 /* GenericWebViewController.swift in Sources */,
+				205B6A6226C3CE3900FFE260 /* LinkTableViewCell.swift in Sources */,
+				205B6A5226C3C5C900FFE260 /* DetalleListaGrouponRouter.swift in Sources */,
 				B4E9619626BD1AF9007238AA /* SplashDosViewController.swift in Sources */,
 				205B6A4226C1339700FFE260 /* CuponCell.swift in Sources */,
 			);

@@ -81,4 +81,8 @@ extension ListaGrouponViewController: UITableViewDelegate, UITableViewDataSource
         return UITableView.automaticDimension
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.presenter.showDetailVC(index: indexPath.row)
+    }
+    
 }

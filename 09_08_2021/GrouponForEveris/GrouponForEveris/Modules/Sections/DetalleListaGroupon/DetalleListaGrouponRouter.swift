@@ -26,58 +26,27 @@ POSSIBILITY OF SUCH DAMAGE.
 */
 
 import Foundation
+import UIKit
 
-protocol ListaGrouponPresenterRouterInterface: PresenterRouterInterface {
+protocol DetalleListaGrouponRouterPresenterInterface: RouterPresenterInterface {
+
+    func showWebView(url: String)
     
 }
 
-protocol ListaGrouponPresenterInteractorInterface: PresenterInteractorInterface {
+final class DetalleListaGrouponRouter: RouterInterface {
     
+    
+    weak var presenter: DetalleListaGrouponPresenterRouterInterface!
+    weak var viewController: UIViewController?
 }
 
-protocol ListaGrouponPresenterViewInterface: PresenterViewInterface {
-    
-    func numberOfRows() -> Int
-    func objectFrom(index: Int) -> CardViewModel?
-    func updateView()
-    func showDetailVC(index: Int)
-}
-
-final class ListaGrouponPresenter: PresenterInterface {
-    
-    var router: ListaGrouponRouterPresenterInterface!
-    var interactor: ListaGrouponInteractorPresenterInterface!
-    weak var view: ListaGrouponViewPresenterInterface!
-    
-    var arrayData: [DataViewModel] = []
-    
-}
-
-extension ListaGrouponPresenter: ListaGrouponPresenterRouterInterface {
-    
-}
-
-extension ListaGrouponPresenter: ListaGrouponPresenterInteractorInterface {
-    
-}
-
-extension ListaGrouponPresenter: ListaGrouponPresenterViewInterface {
-    func showDetailVC(index: Int) {
-        if let dataDes = arrayData[index].data {
-            self.router.showDetailVC(data: dataDes)
+extension DetalleListaGrouponRouter: DetalleListaGrouponRouterPresenterInterface {
+    func showWebView(url: String) {
+        DispatchQueue.main.async {
+            let vc = GenericWebViewCoordinator.build(dto: GenericWebViewCoordinatorDTO(url: url))
+            self.viewController?.navigationController?.pushViewController(vc, animated: true)
         }
     }
-    
-    func updateView() {
-        self.view.reloadInformationInView()
-    }
-    
-    func objectFrom(index: Int) -> CardViewModel? {
-        self.arrayData[index].data
-    }
-    
-    func numberOfRows() -> Int {
-        self.arrayData.count
-       
-    }
+
 }

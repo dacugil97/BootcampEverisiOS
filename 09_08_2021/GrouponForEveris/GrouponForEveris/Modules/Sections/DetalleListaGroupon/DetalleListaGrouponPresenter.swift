@@ -27,57 +27,50 @@ POSSIBILITY OF SUCH DAMAGE.
 
 import Foundation
 
-protocol ListaGrouponPresenterRouterInterface: PresenterRouterInterface {
+protocol DetalleListaGrouponPresenterRouterInterface: PresenterRouterInterface {
     
 }
 
-protocol ListaGrouponPresenterInteractorInterface: PresenterInteractorInterface {
-    
+protocol DetalleListaGrouponPresenterInteractorInterface: PresenterInteractorInterface {
+
 }
 
-protocol ListaGrouponPresenterViewInterface: PresenterViewInterface {
+protocol DetalleListaGrouponPresenterViewInterface: PresenterViewInterface {
     
-    func numberOfRows() -> Int
-    func objectFrom(index: Int) -> CardViewModel?
     func updateView()
-    func showDetailVC(index: Int)
+    func objectForIndexPath() -> CardViewModel?
+    func showWebViewIntoGroupon(data: String)
 }
 
-final class ListaGrouponPresenter: PresenterInterface {
+final class DetalleListaGrouponPresenter: PresenterInterface {
     
-    var router: ListaGrouponRouterPresenterInterface!
-    var interactor: ListaGrouponInteractorPresenterInterface!
-    weak var view: ListaGrouponViewPresenterInterface!
+    var router: DetalleListaGrouponRouterPresenterInterface!
+    var interactor: DetalleListaGrouponInteractorPresenterInterface!
+    weak var view: DetalleListaGrouponViewPresenterInterface!
     
-    var arrayData: [DataViewModel] = []
-    
-}
-
-extension ListaGrouponPresenter: ListaGrouponPresenterRouterInterface {
+    var dataModel: CardViewModel?
     
 }
 
-extension ListaGrouponPresenter: ListaGrouponPresenterInteractorInterface {
+extension DetalleListaGrouponPresenter: DetalleListaGrouponPresenterRouterInterface {
     
 }
 
-extension ListaGrouponPresenter: ListaGrouponPresenterViewInterface {
-    func showDetailVC(index: Int) {
-        if let dataDes = arrayData[index].data {
-            self.router.showDetailVC(data: dataDes)
-        }
+extension DetalleListaGrouponPresenter: DetalleListaGrouponPresenterInteractorInterface {
+
+}
+
+extension DetalleListaGrouponPresenter: DetalleListaGrouponPresenterViewInterface {
+    func showWebViewIntoGroupon(data: String) {
+        self.router.showWebView(url: data)
     }
+    
+    func objectForIndexPath() -> CardViewModel? {
+        self.dataModel
+    }  
     
     func updateView() {
         self.view.reloadInformationInView()
     }
     
-    func objectFrom(index: Int) -> CardViewModel? {
-        self.arrayData[index].data
-    }
-    
-    func numberOfRows() -> Int {
-        self.arrayData.count
-       
-    }
 }
