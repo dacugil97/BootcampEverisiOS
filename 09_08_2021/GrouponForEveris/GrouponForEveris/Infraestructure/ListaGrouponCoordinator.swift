@@ -45,6 +45,7 @@ final class ListaGrouponCoordinator: ModuleInterface {
         let view = View()
         let interactor = Interactor()
         let presenter = Presenter()
+        presenter.arrayData = dto?.modelData ?? []
         let router = Router()
         self.coordinator(view: view, presenter: presenter, router: router, interactor: interactor)
         router.viewController = view

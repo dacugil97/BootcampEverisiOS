@@ -11,6 +11,7 @@
 		205B6A4226C1339700FFE260 /* CuponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A4026C1339700FFE260 /* CuponCell.swift */; };
 		205B6A4326C1339700FFE260 /* CuponCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 205B6A4126C1339700FFE260 /* CuponCell.xib */; };
 		205B6A4526C13A5A00FFE260 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A4426C13A5A00FFE260 /* CardViewModel.swift */; };
+		205B6A4726C3AA2100FFE260 /* DDBBCoreStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A4626C3AA2100FFE260 /* DDBBCoreStack.swift */; };
 		20AC5E0326C102F4006EFD53 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AC5E0126C102F4006EFD53 /* HomeTabBarViewController.swift */; };
 		20AC5E0426C102F4006EFD53 /* HomeTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20AC5E0226C102F4006EFD53 /* HomeTabBarViewController.xib */; };
 		20AC5E0626C10334006EFD53 /* HomeTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AC5E0526C10334006EFD53 /* HomeTabBarCoordinator.swift */; };
@@ -52,6 +53,7 @@
 		205B6A4026C1339700FFE260 /* CuponCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuponCell.swift; sourceTree = "<group>"; };
 		205B6A4126C1339700FFE260 /* CuponCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CuponCell.xib; sourceTree = "<group>"; };
 		205B6A4426C13A5A00FFE260 /* CardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		205B6A4626C3AA2100FFE260 /* DDBBCoreStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDBBCoreStack.swift; sourceTree = "<group>"; };
 		20AC5E0126C102F4006EFD53 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
 		20AC5E0226C102F4006EFD53 /* HomeTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabBarViewController.xib; sourceTree = "<group>"; };
 		20AC5E0526C10334006EFD53 /* HomeTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarCoordinator.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			children = (
 				B4E6C82A26BBC32600A251BA /* SplashCoordinator.swift */,
 				B4E9619926BD1B13007238AA /* SplashDosCoordinator.swift */,
+				20AC5E3026C11739006EFD53 /* ListaGrouponCoordinator.swift */,
 			);
 			path = Infraestructure;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 		206B33C826C1005E00884B5F /* CoreDataStack */ = {
 			isa = PBXGroup;
 			children = (
+				205B6A4626C3AA2100FFE260 /* DDBBCoreStack.swift */,
 			);
 			path = CoreDataStack;
 			sourceTree = "<group>";
@@ -151,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				205B6A3F26C1334900FFE260 /* Cell */,
-				20AC5E3026C11739006EFD53 /* ListaGrouponCoordinator.swift */,
 				20AC5E3226C1173A006EFD53 /* ListaGrouponInteractor.swift */,
 				20AC5E3126C1173A006EFD53 /* ListaGrouponPresenter.swift */,
 				20AC5E3626C1173A006EFD53 /* ListaGrouponProvider.swift */,
@@ -432,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4E9619D26BD1B84007238AA /* SplashDosPresenter.swift in Sources */,
+				205B6A4726C3AA2100FFE260 /* DDBBCoreStack.swift in Sources */,
 				20AC5E0626C10334006EFD53 /* HomeTabBarCoordinator.swift in Sources */,
 				B4E6C83D26BBCACD00A251BA /* AppCoordinator.swift in Sources */,
 				20AC5E3B26C1173A006EFD53 /* ListaGrouponCoordinator.swift in Sources */,

@@ -95,11 +95,19 @@ final class SplashDosInteractor: InteractorInterface {
 
 extension SplashDosInteractor: SplashDosInteractorPresenterInterface {
     func fetchDataFromInteractor() {
-        provider.fetchData { [weak self] (result) in
-            guard self != nil else { return }
-            self?.presenter?.getDataFromInteractor(data: self?.transformDataViewModel(data: result.cards ?? []))
-        } failure: { (error) in
-            //
+        
+        DDBBCoreStack.shared.loadDataIfNeeded { (isRefreshingRequired) in
+            if isRefreshingRequired {
+                self.provider.fetchData { [weak self] (result) in
+                    guard self != nil else { return }
+                    DDBBCoreStack.shared.setCuponList(data: self?.transformDataViewModel(data: result.cards ?? []) ?? [])
+                    self?.presenter?.getDataFromInteractor(data: self?.transformDataViewModel(data: result.cards ?? []))
+                } failure: { (error) in
+                    print(error.localizedDescription)
+                }
+            } else {
+                self.presenter?.getDataFromInteractor(data: DDBBCoreStack.shared.getCuponList())
+            }
         }
     }
 }

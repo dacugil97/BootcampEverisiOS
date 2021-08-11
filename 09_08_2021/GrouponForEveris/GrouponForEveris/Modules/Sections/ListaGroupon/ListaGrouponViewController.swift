@@ -33,11 +33,25 @@ protocol ListaGrouponViewPresenterInterface: ViewPresenterInterface {
 
 class ListaGrouponViewController: UIViewController, ViewInterface {
 
+    // MARK: - Dependencias
+    
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var cuponListTV: UITableView!
+    
+    
     var presenter: ListaGrouponPresenterViewInterface!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.presenter.updateView()
+        self.setupTableView()
+    }
+    
+    private func setupTableView() {
+        self.cuponListTV.delegate = self
+        self.cuponListTV.dataSource = self
+        self.cuponListTV.register(UINib(nibName: CuponCell.defaultReuseIdentifierView, bundle: nil), forCellReuseIdentifier: CuponCell.defaultReuseIdentifierView)
     }
 
 }
@@ -45,6 +59,26 @@ class ListaGrouponViewController: UIViewController, ViewInterface {
 extension ListaGrouponViewController: ListaGrouponViewPresenterInterface {
 
     func reloadInformationInView() {
-        
+        self.cuponListTV.reloadData()
     }
+}
+
+extension ListaGrouponViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.presenter.numberOfRows()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellCupon = self.cuponListTV.dequeueReusableCell(withIdentifier: CuponCell.defaultReuseIdentifierView) as! CuponCell
+    
+        if let model = self.presenter.objectFrom(index: indexPath.row) {
+            cellCupon.configCell(data: model)
+        }
+        return cellCupon
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
 }
