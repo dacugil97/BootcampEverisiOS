@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GenericWebViewController" customModule="GrouponForEveris" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="O2e-aS-AqF" id="Mnz-V8-hfP"/>
+                <outlet property="contentWebView" destination="pO7-BS-eNG" id="3oL-Xf-HW1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="O2e-aS-AqF">
+                    <rect key="frame" x="187" y="428" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="haY-lz-JIb"/>
+                        <constraint firstAttribute="width" constant="40" id="vTY-Hc-CvA"/>
+                    </constraints>
+                </activityIndicatorView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pO7-BS-eNG">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="pO7-BS-eNG" secondAttribute="bottom" id="Cbs-Nm-CA6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pO7-BS-eNG" secondAttribute="trailing" id="Fcf-2P-xTC"/>
+                <constraint firstItem="pO7-BS-eNG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="WxH-eR-Z7b"/>
+                <constraint firstItem="O2e-aS-AqF" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="cbG-CZ-7hl"/>
+                <constraint firstItem="O2e-aS-AqF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wM4-bY-oRI"/>
+                <constraint firstItem="pO7-BS-eNG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wnY-30-h8L"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="18.840579710144929" y="65.625"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

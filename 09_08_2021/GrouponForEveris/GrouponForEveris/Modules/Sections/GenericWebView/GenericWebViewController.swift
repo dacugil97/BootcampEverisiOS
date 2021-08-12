@@ -39,6 +39,7 @@ class GenericWebViewController: UIViewController {
         self.myWebView?.configuration.userContentController = contentVC
         self.myWebView?.navigationDelegate = self
         self.contentWebView.addSubview(self.myWebView ?? WKWebView())
+        self.contentWebView.addSubview(self.activityIndicator)
         
     }
     
