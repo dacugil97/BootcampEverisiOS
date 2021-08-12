@@ -52,7 +52,7 @@ final class LegalesInteractor: InteractorInterface {
                                       termsOfSale: transformToViewPolicy(politica: contents.termsOfSale),
                                       vendorCodeOfConduct: transformToViewPolicy(politica: contents.vendorCodeOfConduct),
                                       faq: transformToViewPolicy(politica: contents.faq),
-                                      customerSupport: SoporteVendedor(content: transformToCustomerInfo(info: contents.customerSupport?.content), title: contents.customerSupport?.title ?? ""),
+                                      customerSupport: SoporteCliente(content: transformToCustomerInfo(info: contents.customerSupport?.content), title: contents.customerSupport?.title ?? ""),
                                       cookieList: transformToViewPolicy(politica: contents.cookieList),
                                       termsOfSaleReservations: transformToViewPolicy(politica: contents.termsOfSaleReservations),
                                       cookieConsent2020: transformToViewPolicy(politica: contents.cookieConsent2020),

@@ -26,26 +26,47 @@ POSSIBILITY OF SUCH DAMAGE.
 */
 
 import Foundation
-import UIKit
 
-protocol LegalesRouterPresenterInterface: RouterPresenterInterface {
-    func showDetailVC(content: Mirror.Child)
+protocol DetalleLegalPresenterRouterInterface: PresenterRouterInterface {
+    
 }
 
-final class LegalesRouter: RouterInterface {
-    
-    
-    weak var presenter: LegalesPresenterRouterInterface!
-    weak var viewController: UIViewController?
+protocol DetalleLegalPresenterInteractorInterface: PresenterInteractorInterface {
+
 }
 
-extension LegalesRouter: LegalesRouterPresenterInterface {
-    func showDetailVC(content: Mirror.Child) {
-        DispatchQueue.main.async {
-            let vc = DetalleLegalCoordinator().build(dto: DetalleLegalCoordinatorDTO(model: content))
-            self.viewController?.navigationController?.pushViewController(vc, animated: true)
+protocol DetalleLegalPresenterViewInterface: PresenterViewInterface {
+    
+    func getData() -> Mirror.Child
+    
+}
+
+final class DetalleLegalPresenter: PresenterInterface {
+    
+    var router: DetalleLegalRouterPresenterInterface!
+    var interactor: DetalleLegalInteractorPresenterInterface!
+    weak var view: DetalleLegalViewPresenterInterface!
+    
+    var modelData: Mirror.Child?
+    
+}
+
+extension DetalleLegalPresenter: DetalleLegalPresenterRouterInterface {
+    
+}
+
+extension DetalleLegalPresenter: DetalleLegalPresenterInteractorInterface {
+
+}
+
+extension DetalleLegalPresenter: DetalleLegalPresenterViewInterface {
+    
+    func getData() -> Mirror.Child {
+        if let modelDes = modelData {
+            return modelDes
         }
+        
+        return (label: "", value: "")
     }
-    
     
 }

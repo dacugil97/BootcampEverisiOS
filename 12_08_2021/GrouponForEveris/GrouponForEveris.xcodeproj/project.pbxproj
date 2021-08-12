@@ -40,6 +40,17 @@
 		205B6A8126C5113000FFE260 /* ContentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A8026C5113000FFE260 /* ContentsViewModel.swift */; };
 		205B6A8526C5267800FFE260 /* LegalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A8326C5267800FFE260 /* LegalCell.swift */; };
 		205B6A8626C5267800FFE260 /* LegalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 205B6A8426C5267800FFE260 /* LegalCell.xib */; };
+		205B6A8F26C530E300FFE260 /* DetalleLegalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 205B6A8826C530E300FFE260 /* DetalleLegalViewController.xib */; };
+		205B6A9026C530E300FFE260 /* DetalleLegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A8926C530E300FFE260 /* DetalleLegalViewController.swift */; };
+		205B6A9126C530E300FFE260 /* DetalleLegalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A8A26C530E300FFE260 /* DetalleLegalRouter.swift */; };
+		205B6A9226C530E300FFE260 /* DetalleLegalProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A8B26C530E300FFE260 /* DetalleLegalProvider.swift */; };
+		205B6A9326C530E300FFE260 /* DetalleLegalCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A8C26C530E300FFE260 /* DetalleLegalCoordinator.swift */; };
+		205B6A9426C530E300FFE260 /* DetalleLegalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A8D26C530E300FFE260 /* DetalleLegalPresenter.swift */; };
+		205B6A9526C530E300FFE260 /* DetalleLegalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A8E26C530E300FFE260 /* DetalleLegalInteractor.swift */; };
+		205B6A9926C531F700FFE260 /* LegalPolicyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A9726C531F700FFE260 /* LegalPolicyCell.swift */; };
+		205B6A9A26C531F700FFE260 /* LegalPolicyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 205B6A9826C531F700FFE260 /* LegalPolicyCell.xib */; };
+		205B6A9D26C5321000FFE260 /* CustomerSupportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6A9B26C5321000FFE260 /* CustomerSupportCell.swift */; };
+		205B6A9E26C5321000FFE260 /* CustomerSupportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 205B6A9C26C5321000FFE260 /* CustomerSupportCell.xib */; };
 		20AC5E0326C102F4006EFD53 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AC5E0126C102F4006EFD53 /* HomeTabBarViewController.swift */; };
 		20AC5E0426C102F4006EFD53 /* HomeTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20AC5E0226C102F4006EFD53 /* HomeTabBarViewController.xib */; };
 		20AC5E0626C10334006EFD53 /* HomeTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AC5E0526C10334006EFD53 /* HomeTabBarCoordinator.swift */; };
@@ -110,6 +121,17 @@
 		205B6A8026C5113000FFE260 /* ContentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsViewModel.swift; sourceTree = "<group>"; };
 		205B6A8326C5267800FFE260 /* LegalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalCell.swift; sourceTree = "<group>"; };
 		205B6A8426C5267800FFE260 /* LegalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LegalCell.xib; sourceTree = "<group>"; };
+		205B6A8826C530E300FFE260 /* DetalleLegalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetalleLegalViewController.xib; sourceTree = "<group>"; };
+		205B6A8926C530E300FFE260 /* DetalleLegalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleLegalViewController.swift; sourceTree = "<group>"; };
+		205B6A8A26C530E300FFE260 /* DetalleLegalRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleLegalRouter.swift; sourceTree = "<group>"; };
+		205B6A8B26C530E300FFE260 /* DetalleLegalProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleLegalProvider.swift; sourceTree = "<group>"; };
+		205B6A8C26C530E300FFE260 /* DetalleLegalCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleLegalCoordinator.swift; sourceTree = "<group>"; };
+		205B6A8D26C530E300FFE260 /* DetalleLegalPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleLegalPresenter.swift; sourceTree = "<group>"; };
+		205B6A8E26C530E300FFE260 /* DetalleLegalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleLegalInteractor.swift; sourceTree = "<group>"; };
+		205B6A9726C531F700FFE260 /* LegalPolicyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalPolicyCell.swift; sourceTree = "<group>"; };
+		205B6A9826C531F700FFE260 /* LegalPolicyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LegalPolicyCell.xib; sourceTree = "<group>"; };
+		205B6A9B26C5321000FFE260 /* CustomerSupportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerSupportCell.swift; sourceTree = "<group>"; };
+		205B6A9C26C5321000FFE260 /* CustomerSupportCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerSupportCell.xib; sourceTree = "<group>"; };
 		20AC5E0126C102F4006EFD53 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
 		20AC5E0226C102F4006EFD53 /* HomeTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabBarViewController.xib; sourceTree = "<group>"; };
 		20AC5E0526C10334006EFD53 /* HomeTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarCoordinator.swift; sourceTree = "<group>"; };
@@ -250,6 +272,32 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		205B6A8726C530B700FFE260 /* DetalleLegal */ = {
+			isa = PBXGroup;
+			children = (
+				205B6A9626C531E100FFE260 /* Cells */,
+				205B6A8826C530E300FFE260 /* DetalleLegalViewController.xib */,
+				205B6A8926C530E300FFE260 /* DetalleLegalViewController.swift */,
+				205B6A8A26C530E300FFE260 /* DetalleLegalRouter.swift */,
+				205B6A8B26C530E300FFE260 /* DetalleLegalProvider.swift */,
+				205B6A8C26C530E300FFE260 /* DetalleLegalCoordinator.swift */,
+				205B6A8D26C530E300FFE260 /* DetalleLegalPresenter.swift */,
+				205B6A8E26C530E300FFE260 /* DetalleLegalInteractor.swift */,
+			);
+			path = DetalleLegal;
+			sourceTree = "<group>";
+		};
+		205B6A9626C531E100FFE260 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				205B6A9726C531F700FFE260 /* LegalPolicyCell.swift */,
+				205B6A9826C531F700FFE260 /* LegalPolicyCell.xib */,
+				205B6A9B26C5321000FFE260 /* CustomerSupportCell.swift */,
+				205B6A9C26C5321000FFE260 /* CustomerSupportCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		206B33C526C0FFC700884B5F /* HomeTabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +422,7 @@
 		B4E6C81926BBC2A100A251BA /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				205B6A8726C530B700FFE260 /* DetalleLegal */,
 				205B6A7026C501E700FFE260 /* Legales */,
 				205B6A6426C3DDB900FFE260 /* GenericWebView */,
 				205B6A4826C3C5B500FFE260 /* DetalleListaGroupon */,
@@ -519,7 +568,10 @@
 				205B6A3C26C12DCE00FFE260 /* ListaGrouponViewController.xib in Resources */,
 				205B6A8626C5267800FFE260 /* LegalCell.xib in Resources */,
 				205B6A6326C3CE3900FFE260 /* LinkTableViewCell.xib in Resources */,
+				205B6A9A26C531F700FFE260 /* LegalPolicyCell.xib in Resources */,
 				205B6A6D26C4F71700FFE260 /* grouponLegales.json in Resources */,
+				205B6A9E26C5321000FFE260 /* CustomerSupportCell.xib in Resources */,
+				205B6A8F26C530E300FFE260 /* DetalleLegalViewController.xib in Resources */,
 				20AC5E0426C102F4006EFD53 /* HomeTabBarViewController.xib in Resources */,
 				205B6A4326C1339700FFE260 /* CuponCell.xib in Resources */,
 				205B6A7826C5025E00FFE260 /* LegalesViewController.xib in Resources */,
@@ -584,10 +636,12 @@
 			files = (
 				205B6A6F26C5008600FFE260 /* EverLegalesServerModel.swift in Sources */,
 				205B6A5526C3C5C900FFE260 /* DetalleListaGrouponPresenter.swift in Sources */,
+				205B6A9326C530E300FFE260 /* DetalleLegalCoordinator.swift in Sources */,
 				B4E9619D26BD1B84007238AA /* SplashDosPresenter.swift in Sources */,
 				205B6A4726C3AA2100FFE260 /* DDBBCoreStack.swift in Sources */,
 				205B6A7D26C5025E00FFE260 /* LegalesPresenter.swift in Sources */,
 				205B6A6A26C3DE1300FFE260 /* GenericWebViewCoordinator.swift in Sources */,
+				205B6A9226C530E300FFE260 /* DetalleLegalProvider.swift in Sources */,
 				20AC5E0626C10334006EFD53 /* HomeTabBarCoordinator.swift in Sources */,
 				B4E6C83D26BBCACD00A251BA /* AppCoordinator.swift in Sources */,
 				20AC5E3B26C1173A006EFD53 /* ListaGrouponCoordinator.swift in Sources */,
@@ -598,10 +652,12 @@
 				B4E961A326BD1C89007238AA /* SplashDosRouter.swift in Sources */,
 				20AC5E3826C1173A006EFD53 /* ListaGrouponViewController.swift in Sources */,
 				205B6A8526C5267800FFE260 /* LegalCell.swift in Sources */,
+				205B6A9526C530E300FFE260 /* DetalleLegalInteractor.swift in Sources */,
 				B4E6C82726BBC30400A251BA /* SplashRouter.swift in Sources */,
 				B4E6C7F526BBB91700A251BA /* AppDelegate.swift in Sources */,
 				B4E6C84826BBDB3600A251BA /* EverGrouponServerModel.swift in Sources */,
 				205B6A7926C5025E00FFE260 /* LegalesViewController.swift in Sources */,
+				205B6A9126C530E300FFE260 /* DetalleLegalRouter.swift in Sources */,
 				205B6A7C26C5025E00FFE260 /* LegalesCoordinator.swift in Sources */,
 				B4E6C82426BBC2F600A251BA /* SplashInteractor.swift in Sources */,
 				205B6A5626C3C5C900FFE260 /* DetalleListaGrouponInteractor.swift in Sources */,
@@ -621,17 +677,21 @@
 				205B6A7B26C5025E00FFE260 /* LegalesProvider.swift in Sources */,
 				B4E6C82B26BBC32600A251BA /* SplashCoordinator.swift in Sources */,
 				B4E6C81626BBBD7500A251BA /* BaseVIPER.swift in Sources */,
+				205B6A9926C531F700FFE260 /* LegalPolicyCell.swift in Sources */,
 				205B6A5326C3C5C900FFE260 /* DetalleListaGrouponProvider.swift in Sources */,
 				205B6A8126C5113000FFE260 /* ContentsViewModel.swift in Sources */,
 				205B6A5426C3C5C900FFE260 /* DetalleListaGrouponCoordinator.swift in Sources */,
 				B4E6C84226BBD05300A251BA /* NetworkService.swift in Sources */,
 				B4E6C84C26BBDB8E00A251BA /* SplashProvider.swift in Sources */,
 				B4E6C82126BBC2DB00A251BA /* SplashPresenter.swift in Sources */,
+				205B6A9026C530E300FFE260 /* DetalleLegalViewController.swift in Sources */,
+				205B6A9426C530E300FFE260 /* DetalleLegalPresenter.swift in Sources */,
 				205B6A6726C3DE0300FFE260 /* GenericWebViewController.swift in Sources */,
 				205B6A6226C3CE3900FFE260 /* LinkTableViewCell.swift in Sources */,
 				205B6A5226C3C5C900FFE260 /* DetalleListaGrouponRouter.swift in Sources */,
 				B4E9619626BD1AF9007238AA /* SplashDosViewController.swift in Sources */,
 				205B6A4226C1339700FFE260 /* CuponCell.swift in Sources */,
+				205B6A9D26C5321000FFE260 /* CustomerSupportCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

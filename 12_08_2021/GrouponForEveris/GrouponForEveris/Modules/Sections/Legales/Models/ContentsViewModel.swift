@@ -24,7 +24,7 @@ struct TerminosViewModel {
     let termsOfSale: PoliticaMercado?
     let vendorCodeOfConduct: PoliticaMercado?
     let faq: PoliticaMercado?
-    let customerSupport: SoporteVendedor?
+    let customerSupport: SoporteCliente?
     let cookieList: PoliticaMercado?
     let termsOfSaleReservations: PoliticaMercado?
     let cookieConsent2020: PoliticaMercado?
@@ -51,7 +51,7 @@ struct TerminosViewModel {
          termsOfSale: PoliticaMercado,
          vendorCodeOfConduct: PoliticaMercado,
          faq: PoliticaMercado,
-         customerSupport: SoporteVendedor,
+         customerSupport: SoporteCliente,
          cookieList: PoliticaMercado,
          termsOfSaleReservations: PoliticaMercado,
          cookieConsent2020: PoliticaMercado,
@@ -102,7 +102,7 @@ struct PoliticaMercado {
     }
 }
 
-struct SoporteVendedor{
+struct SoporteCliente{
     let content: ContentView
     let title: String?
     

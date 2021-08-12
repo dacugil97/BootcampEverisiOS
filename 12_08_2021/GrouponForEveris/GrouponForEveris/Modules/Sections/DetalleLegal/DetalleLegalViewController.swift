@@ -27,56 +27,58 @@ POSSIBILITY OF SUCH DAMAGE.
 
 import UIKit
 
-protocol LegalesViewPresenterInterface: ViewPresenterInterface {
+protocol DetalleLegalViewPresenterInterface: ViewPresenterInterface {
     func reloadInformationInView()
 }
 
-class LegalesViewController: UIViewController, ViewInterface {
+class DetalleLegalViewController: UIViewController, ViewInterface {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var legalTV: UITableView!
+    @IBOutlet weak var detalleLegalTV: UITableView!
     
-    var presenter: LegalesPresenterViewInterface!
+
+    var presenter: DetalleLegalPresenterViewInterface!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter.fetchData()
-        self.presenter.updateView()
         self.setupTableView()
     }
-
-    private func setupTableView() {
-        self.legalTV.delegate = self
-        self.legalTV.dataSource = self
-        self.legalTV.register(UINib(nibName: LegalCell.defaultReuseIdentifierView, bundle: nil), forCellReuseIdentifier: LegalCell.defaultReuseIdentifierView)
-    }
     
+    private func setupTableView() {
+        self.detalleLegalTV.delegate = self
+        self.detalleLegalTV.dataSource = self
+        self.detalleLegalTV.register(UINib(nibName: LegalPolicyCell.defaultReuseIdentifierView, bundle: nil), forCellReuseIdentifier: LegalPolicyCell.defaultReuseIdentifierView)
+        self.detalleLegalTV.register(UINib(nibName: CustomerSupportCell.defaultReuseIdentifierView, bundle: nil), forCellReuseIdentifier: CustomerSupportCell.defaultReuseIdentifierView)
+    }
+
 }
 
-extension LegalesViewController: LegalesViewPresenterInterface {
+extension DetalleLegalViewController: DetalleLegalViewPresenterInterface {
 
     func reloadInformationInView() {
-        self.legalTV.reloadData()
+        
     }
 }
 
-extension LegalesViewController: UITableViewDelegate, UITableViewDataSource {
+extension DetalleLegalViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        self.presenter.numberOfRows()
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let legalCell = self.legalTV.dequeueReusableCell(withIdentifier: LegalCell.defaultReuseIdentifierView) as! LegalCell
         
-        if let title = self.presenter.getLegalTitleFrom(index: indexPath.row) {
-            legalCell.configCell(title: title)
+        if self.presenter.getData().label == "customerSupport" {
+            let customerCell = self.detalleLegalTV.dequeueReusableCell(withIdentifier: CustomerSupportCell.defaultReuseIdentifierView) as! CustomerSupportCell
+            
+            customerCell.configCell(data: self.presenter.getData().value as! SoporteCliente)
+            return customerCell
+        } else {
+            let legalCell = self.detalleLegalTV.dequeueReusableCell(withIdentifier: LegalPolicyCell.defaultReuseIdentifierView) as! LegalPolicyCell
+            
+            legalCell.configCell(data: self.presenter.getData().value as! PoliticaMercado)
+            return legalCell
         }
-        
-        return legalCell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        self.presenter.showDetailVC(index: indexPath.row)
-    }
+    
 }

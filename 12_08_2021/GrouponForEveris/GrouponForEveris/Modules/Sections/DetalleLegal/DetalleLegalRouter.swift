@@ -28,24 +28,17 @@ POSSIBILITY OF SUCH DAMAGE.
 import Foundation
 import UIKit
 
-protocol LegalesRouterPresenterInterface: RouterPresenterInterface {
-    func showDetailVC(content: Mirror.Child)
+protocol DetalleLegalRouterPresenterInterface: RouterPresenterInterface {
+
 }
 
-final class LegalesRouter: RouterInterface {
+final class DetalleLegalRouter: RouterInterface {
     
     
-    weak var presenter: LegalesPresenterRouterInterface!
+    weak var presenter: DetalleLegalPresenterRouterInterface!
     weak var viewController: UIViewController?
 }
 
-extension LegalesRouter: LegalesRouterPresenterInterface {
-    func showDetailVC(content: Mirror.Child) {
-        DispatchQueue.main.async {
-            let vc = DetalleLegalCoordinator().build(dto: DetalleLegalCoordinatorDTO(model: content))
-            self.viewController?.navigationController?.pushViewController(vc, animated: true)
-        }
-    }
-    
+extension DetalleLegalRouter: DetalleLegalRouterPresenterInterface {
     
 }

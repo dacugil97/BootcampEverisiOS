@@ -41,6 +41,7 @@ protocol LegalesPresenterViewInterface: PresenterViewInterface {
     func numberOfRows() -> Int
     func getLegalTitleFrom(index: Int) -> String?
     func updateView()
+    func showDetailVC(index: Int)
 }
 
 final class LegalesPresenter: PresenterInterface {
@@ -72,10 +73,9 @@ extension LegalesPresenter: LegalesPresenterViewInterface {
         if let legalDes = legalMirror {
             let idx = legalDes.children.index(legalDes.children.startIndex, offsetBy: index, limitedBy: legalDes.children.endIndex)
             let childAtIndex =  legalDes.children[idx!]
-            
-            
+                        
             if childAtIndex.label == "customerSupport" {
-                let content = childAtIndex.value as! SoporteVendedor
+                let content = childAtIndex.value as! SoporteCliente
                 
                 if (content.title?.isEmpty ?? false) {
                     return childAtIndex.label
@@ -91,9 +91,7 @@ extension LegalesPresenter: LegalesPresenterViewInterface {
                 } else {
                     return content.title ?? ""
                 }
-                
             }
-            
         }
         
         return ""
@@ -110,5 +108,16 @@ extension LegalesPresenter: LegalesPresenterViewInterface {
     func updateView() {
         self.view.reloadInformationInView()
     }
+    
+    func showDetailVC(index: Int) {
+        if let legalDes = legalMirror {
+            let idx = legalDes.children.index(legalDes.children.startIndex, offsetBy: index, limitedBy: legalDes.children.endIndex)
+            let childAtIndex =  legalDes.children[idx!]
+            
+            self.router.showDetailVC(content: childAtIndex)
+            
+        }
+    }
+    
 }
 
