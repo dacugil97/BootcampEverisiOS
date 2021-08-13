@@ -28,28 +28,26 @@ POSSIBILITY OF SUCH DAMAGE.
 import Foundation
 import UIKit
 
-protocol DetalleListaGrouponRouterPresenterInterface: RouterPresenterInterface {
+// MARK: - module builder
 
-    func showWebView(url: String)
-    
-}
+final class LoginCoordinator: ModuleInterface {
 
-final class DetalleListaGrouponRouter: RouterInterface {
+    typealias View = LoginViewController
+    typealias Presenter = LoginPresenter
+    typealias Router = LoginRouter
+    typealias Interactor = LoginInteractor
     
-    
-    weak var presenter: DetalleListaGrouponPresenterRouterInterface!
-    weak var viewController: UIViewController?
-}
-
-extension DetalleListaGrouponRouter: DetalleListaGrouponRouterPresenterInterface {
-    func showWebView(url: String) {
-        DispatchQueue.main.async {
-            let vc = GenericWebViewCoordinator.build(dto: GenericWebViewCoordinatorDTO(url: url))
-            self.viewController?.navigationController?.pushViewController(vc, animated: true)
-//            vc.modalPresentationStyle = .fullScreen
-//            vc.modalTransitionStyle = .coverVertical
-//            self.viewController?.present(vc, animated: true, completion: nil)
-        }
+    func navigation() -> UINavigationController {
+        UINavigationController(rootViewController: build())
     }
 
+    func build() -> UIViewController {
+        let view = View()
+        let interactor = Interactor()
+        let presenter = Presenter()
+        let router = Router()
+        self.coordinator(view: view, presenter: presenter, router: router, interactor: interactor)
+        router.viewController = view
+        return view
+    }
 }

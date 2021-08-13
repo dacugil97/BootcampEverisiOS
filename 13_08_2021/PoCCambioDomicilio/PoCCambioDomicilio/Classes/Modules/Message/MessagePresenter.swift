@@ -26,30 +26,37 @@ POSSIBILITY OF SUCH DAMAGE.
 */
 
 import Foundation
-import UIKit
 
-protocol DetalleListaGrouponRouterPresenterInterface: RouterPresenterInterface {
-
-    func showWebView(url: String)
+protocol MessagePresenterRouterInterface: PresenterRouterInterface {
     
 }
 
-final class DetalleListaGrouponRouter: RouterInterface {
-    
-    
-    weak var presenter: DetalleListaGrouponPresenterRouterInterface!
-    weak var viewController: UIViewController?
+protocol MessagePresenterInteractorInterface: PresenterInteractorInterface {
+
 }
 
-extension DetalleListaGrouponRouter: DetalleListaGrouponRouterPresenterInterface {
-    func showWebView(url: String) {
-        DispatchQueue.main.async {
-            let vc = GenericWebViewCoordinator.build(dto: GenericWebViewCoordinatorDTO(url: url))
-            self.viewController?.navigationController?.pushViewController(vc, animated: true)
-//            vc.modalPresentationStyle = .fullScreen
-//            vc.modalTransitionStyle = .coverVertical
-//            self.viewController?.present(vc, animated: true, completion: nil)
-        }
-    }
+protocol MessagePresenterViewInterface: PresenterViewInterface {
+    
+}
 
+final class MessagePresenter: PresenterInterface {
+    
+    var router: MessageRouterPresenterInterface!
+    var interactor: MessageInteractorPresenterInterface!
+    weak var view: MessageViewPresenterInterface!
+    
+    // arrayData
+    
+}
+
+extension MessagePresenter: MessagePresenterRouterInterface {
+    
+}
+
+extension MessagePresenter: MessagePresenterInteractorInterface {
+
+}
+
+extension MessagePresenter: MessagePresenterViewInterface {
+    
 }

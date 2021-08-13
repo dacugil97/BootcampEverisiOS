@@ -1,7 +1,7 @@
 /*
 Copyright, everisSL
 All rights reserved.
- 
+
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
 
@@ -11,7 +11,7 @@ list of conditions and the following disclaimer.
 2. Redistributions in binary form must reproduce the above copyright notice,
 this list of conditions and the following disclaimer in the documentation
 and/or other materials provided with the distribution.
- 
+
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
 AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
 IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
@@ -26,30 +26,42 @@ POSSIBILITY OF SUCH DAMAGE.
 */
 
 import Foundation
-import UIKit
 
-protocol DetalleListaGrouponRouterPresenterInterface: RouterPresenterInterface {
-
-    func showWebView(url: String)
+class DDBBCoreStack {
     
-}
-
-final class DetalleListaGrouponRouter: RouterInterface {
+    static let shared = DDBBCoreStack()
+    private let defaults = UserDefaults.standard
+    private let defaultsKey = "lastRefresh"
+    private let calendar = Calendar.current
     
-    
-    weak var presenter: DetalleListaGrouponPresenterRouterInterface!
-    weak var viewController: UIViewController?
-}
-
-extension DetalleListaGrouponRouter: DetalleListaGrouponRouterPresenterInterface {
-    func showWebView(url: String) {
-        DispatchQueue.main.async {
-            let vc = GenericWebViewCoordinator.build(dto: GenericWebViewCoordinatorDTO(url: url))
-            self.viewController?.navigationController?.pushViewController(vc, animated: true)
-//            vc.modalPresentationStyle = .fullScreen
-//            vc.modalTransitionStyle = .coverVertical
-//            self.viewController?.present(vc, animated: true, completion: nil)
+    func loadDataIfNeeded(completionHandler: @escaping (Bool) -> ()) {
+        if isRefreshingRequired() {
+            defaults.setValue(Date(), forKey: defaultsKey)
+            completionHandler(true)
+        } else {
+            completionHandler(false)
         }
     }
+    
+    private func isRefreshingRequired() -> Bool {
+        guard let lastRefreshing = defaults.object(forKey: defaultsKey) as? Date else {
+            return true
+        }
+        if let diff = calendar.dateComponents([.hour], from: lastRefreshing, to: Date()).hour, diff > 12 {
+            return true
+        } else {
+            return false
+        }
+    }
+}
 
+extension DDBBCoreStack {
+    
+    
+}
+
+private extension DDBBCoreStack {
+    struct Constants {
+        static let cuponList = "cuponList"
+    }
 }

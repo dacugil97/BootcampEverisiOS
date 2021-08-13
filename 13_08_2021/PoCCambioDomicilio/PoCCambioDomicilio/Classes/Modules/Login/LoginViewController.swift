@@ -25,31 +25,25 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 */
 
-import Foundation
 import UIKit
 
-protocol DetalleListaGrouponRouterPresenterInterface: RouterPresenterInterface {
-
-    func showWebView(url: String)
-    
+protocol LoginViewPresenterInterface: ViewPresenterInterface {
+    func reloadInformationInView()
 }
 
-final class DetalleListaGrouponRouter: RouterInterface {
-    
-    
-    weak var presenter: DetalleListaGrouponPresenterRouterInterface!
-    weak var viewController: UIViewController?
-}
+class LoginViewController: UIViewController, ViewInterface {
 
-extension DetalleListaGrouponRouter: DetalleListaGrouponRouterPresenterInterface {
-    func showWebView(url: String) {
-        DispatchQueue.main.async {
-            let vc = GenericWebViewCoordinator.build(dto: GenericWebViewCoordinatorDTO(url: url))
-            self.viewController?.navigationController?.pushViewController(vc, animated: true)
-//            vc.modalPresentationStyle = .fullScreen
-//            vc.modalTransitionStyle = .coverVertical
-//            self.viewController?.present(vc, animated: true, completion: nil)
-        }
+    var presenter: LoginPresenterViewInterface!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 
+}
+
+extension LoginViewController: LoginViewPresenterInterface {
+
+    func reloadInformationInView() {
+        
+    }
 }
