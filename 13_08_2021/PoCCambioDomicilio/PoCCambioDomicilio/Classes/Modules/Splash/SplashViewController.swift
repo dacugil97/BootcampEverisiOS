@@ -78,6 +78,7 @@ class SplashViewController: UIViewController, ViewInterface {
                        options: options,
                        animations: {
                         self.view.layoutIfNeeded()
+                        self.displayableView.layer.cornerRadius = 15
                        }, completion: {
                         _ in
                         self.secondDisplay()
