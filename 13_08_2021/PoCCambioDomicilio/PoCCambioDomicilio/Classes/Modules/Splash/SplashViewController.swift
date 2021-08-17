@@ -64,7 +64,6 @@ class SplashViewController: UIViewController, ViewInterface {
     
     private func firstDisplay() {
         view.layoutIfNeeded()
-        self.textLbl.fadeTransition(0.4)
         self.textLbl.text = "Una relación ágil y sencilla con las administraciones públicas"
         self.viewHeight.constant = 300
         self.imageVerticalConstraint.constant = 230
@@ -102,9 +101,9 @@ class SplashViewController: UIViewController, ViewInterface {
                         self.view.layoutIfNeeded()
                        }, completion: {
                         _ in
-                        self.textLbl.fadeTransition(0.4)
+                        self.textLbl.fadeTransition(1.2)
                         self.textLbl.text = "Comunica a los distintos organismos tu cambio de domicilio sin tener que realizarlo presencialmente"
-                        self.continueBtn.fadeTransition(0.4)
+                        self.continueBtn.fadeTransition(0.8)
                         self.continueBtn.isHidden = false
                        })
     }
